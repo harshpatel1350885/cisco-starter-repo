@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-function Exhibit(props) {
-    return (
-      <div>
-        <h1>Dashboard</h1>
-      </div>
-    )
-  }
-  
-  export default Exhibit
+class Exhibit extends Component {
+    render() {
+        return (
+            <div className="Exhibit">
+                <h2 className="ExhibitHeading">{this.props.heading}</h2>
+            </div>
+        );
+    }
+}
+
+export default Exhibit;

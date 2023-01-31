@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-function Banner() {
-  return (
-    <div>
-      <h1>Sextant</h1>
-    </div>
-  )
+class Banner extends Component {
+    render() {
+        return (
+            <div className="Banner">
+                <h1>{this.props.titlet}</h1>
+            </div>
+        );
+    }
 }
 
-export default Banner
+export default Banner;
