@@ -4,7 +4,7 @@ class Banner extends Component {
     render() {
         return (
             <div className="Banner">
-                <h1>{this.props.titlet}</h1>
+                <h1>{this.props.header}</h1>
             </div>
         );
     }

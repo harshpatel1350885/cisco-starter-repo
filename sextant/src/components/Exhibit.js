@@ -5,6 +5,9 @@ class Exhibit extends Component {
         return (
             <div className="Exhibit">
                 <h2 className="ExhibitHeading">{this.props.heading}</h2>
+                <div className="ExhibitContent">
+                    {this.props.children}
+                </div>
             </div>
         );
     }
