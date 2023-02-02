@@ -1,21 +1,30 @@
 import React, { Component } from 'react';
 
 class getIP extends Component { 
-    constructor(props){
-        this.state = {
-            url: props.url,
-            ipaddr: null
+    constructor(props) {
+        super(props);
+        this.state = {      
+            url: props.url,      
+            address: "test"    
         };
-        const response = fetch(this.state.url);
-        this.setState({ ipaddr: response.ip })
     }
-        render() {
-            return (
-                <div className="getIP">
-                    <h1 className="Address">{this.state.ipaddr}</h1>
-                </div>
-            );
-        }
+
+    getAddress() {
+        const response = fetch('http://api.ipify.org/?format=json');
+        const data = response.json();
+        this.setState({
+            address: data
+        });
+    }
+
+    render() {
+        return (
+            <div className="AddressDisplay">
+                {this.state.address}
+            </div>
+        );
+    }
+
 }
 
 export default getIP;
